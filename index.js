@@ -63,6 +63,10 @@ app.get('/profile', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'profile.html'));
 });
 
+// Route to display the blogs page
+app.get('/blogs', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'blogs.html'));
+});
 
 // const sendFile = (page) => (req, res) => {
 //   res.sendFile(path.join(__dirname, 'views', `${page}.html`));
@@ -75,6 +79,7 @@ app.get('/profile', (req, res) => {
 // app.get('/dashboard', sendFile('dashboard'));
 // app.get('/landing', sendFile('landing'));
 // app.get('/profile', sendFile('profile'));
+// app.get('/blogs', sendFile('blogs'));
 
 // Route to handle user registration
 app.post('/users', async (req, res) => {
